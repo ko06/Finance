@@ -162,8 +162,8 @@ function Home() {
       bnb: "redtext",
     },
     {
-      today: "New Orders",
-      title: "13,200",
+      today: "Ammount in Hand",
+      title: "193,200",
       persent: "10%",
       icon: cart,
       bnb: "bnb2",
@@ -488,7 +488,7 @@ function Home() {
           </Col>
         </Row>
 
-        <Row gutter={[24, 0]}>
+        {/* <Row gutter={[24, 0]}>
           <Col xs={24} md={12} sm={24} lg={12} xl={14} className="mb-24">
             <Card bordered={false} className="criclebox h-full">
               <Row gutter>
@@ -552,7 +552,7 @@ function Home() {
               </div>
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     </>
   );

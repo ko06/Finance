@@ -18,20 +18,11 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import Main from "./components/layout/Main";
 import "antd/dist/antd.css";
-import "./assets/styles/main.less";
+import "./assets/styles/main.css";
 import "./assets/styles/responsive.css";
-import { ConfigProvider } from 'antd';
 
 function App() {
   return (
-    <ConfigProvider
-    theme={{
-      token: {
-        colorPrimary: '#00b96b',
-      },
-    }}
-  >
-
     <div className="App">
       <Switch>
         <Route path="/" exact component={SignIn} />
@@ -45,7 +36,6 @@ function App() {
         </Main>
       </Switch>
     </div>
-    </ConfigProvider>
   );
 }
 
