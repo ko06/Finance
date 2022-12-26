@@ -33,15 +33,10 @@ import {
 } from "@ant-design/icons";
 
 import BgProfile from "../assets/images/bg-profile.jpg";
-import profilavatar from "../assets/images/face-1.jpg";
-import convesionImg from "../assets/images/face-3.jpg";
-import convesionImg2 from "../assets/images/face-4.jpg";
-import convesionImg3 from "../assets/images/face-5.jpeg";
-import convesionImg4 from "../assets/images/face-6.jpeg";
-import convesionImg5 from "../assets/images/face-2.jpg";
-import project1 from "../assets/images/home-decor-1.jpeg";
-import project2 from "../assets/images/home-decor-2.jpeg";
-import project3 from "../assets/images/home-decor-3.jpeg";
+import profilavatar from "../assets/images/face-1.png";
+import project1 from "../assets/images/center-1.jpeg";
+import project2 from "../assets/images/center-2.jpeg";
+import project3 from "../assets/images/center.jpeg";
 
 function Profile() {
   const [imageURL, setImageURL] = useState(false);
@@ -105,53 +100,31 @@ function Profile() {
     </div>
   );
 
-  const data = [
-    {
-      title: "Sophie B.",
-      avatar: convesionImg,
-      description: "Hi! I need more information…",
-    },
-    {
-      title: "Anne Marie",
-      avatar: convesionImg2,
-      description: "Awesome work, can you…",
-    },
-    {
-      title: "Ivan",
-      avatar: convesionImg3,
-      description: "About files I can…",
-    },
-    {
-      title: "Peterson",
-      avatar: convesionImg4,
-      description: "Have a great afternoon…",
-    },
-    {
-      title: "Nick Daniel",
-      avatar: convesionImg5,
-      description: "Hi! I need more information…",
-    },
-  ];
-
   const project = [
     {
       img: project1,
-      titlesub: "Project #1",
+      titlesub: "கிழக்கு மரியானதா தெரு- 01",
       title: "Modern",
+      time: "6.00 AM",
+      lead: "திலகா",
       disciption:
         "As Uber works through a huge amount of internal management turmoil.",
     },
     {
       img: project2,
-      titlesub: "Project #2",
+      titlesub: "கிழக்கு மரியானதா தெரு- 02",
       title: "Scandinavian",
+      time: "6.30 AM",
+      lead: "செலின் மெரி ",
       disciption:
         "Music is something that every person has his or her own specific opinion about.",
     },
     {
       img: project3,
-      titlesub: "Project #3",
+      titlesub: "கிழக்கு மரியானதா தெரு- 03",
       title: "Minimalist",
+      time: "7.00 AM",
+      lead: "ஜெயபாரதி",
       disciption:
         "Different people have different taste, and various types of music, Zimbali Resort",
     },
@@ -174,8 +147,8 @@ function Profile() {
                 <Avatar size={74} shape="square" src={profilavatar} />
 
                 <div className="avatar-info">
-                  <h4 className="font-semibold m-0">Sarah Jacob</h4>
-                  <p>CEO / Co-Founder</p>
+                  <h4 className="font-semibold m-0">Saravanan</h4>
+                  <p>Staff </p>
                 </div>
               </Avatar.Group>
             </Col>
@@ -190,166 +163,58 @@ function Profile() {
             >
               <Radio.Group defaultValue="a">
                 <Radio.Button value="a">OVERVIEW</Radio.Button>
-                <Radio.Button value="b">TEAMS</Radio.Button>
-                <Radio.Button value="c">PROJECTS</Radio.Button>
+                <Radio.Button value="b">TODAY</Radio.Button>
+                <Radio.Button value="c">TOMORROW</Radio.Button>
               </Radio.Group>
+              <div
+                style={{ paddingLeft: 20 }}
+                className="header-col header-btn"
+              >
+                <Button type="primary">Get Order</Button>
+              </div>
             </Col>
           </Row>
         }
       ></Card>
 
-      <Row gutter={[24, 0]}>
-        <Col span={24} md={8} className="mb-24 ">
-          <Card
-            bordered={false}
-            className="header-solid h-full"
-            title={<h6 className="font-semibold m-0">Platform Settings</h6>}
-          >
-            <ul className="list settings-list">
-              <li>
-                <h6 className="list-header text-sm text-muted">ACCOUNT</h6>
-              </li>
-              <li>
-                <Switch defaultChecked />
-
-                <span>Email me when someone follows me</span>
-              </li>
-              <li>
-                <Switch />
-                <span>Email me when someone answers me</span>
-              </li>
-              <li>
-                <Switch defaultChecked />
-                <span>Email me when someone mentions me</span>
-              </li>
-              <li>
-                <h6 className="list-header text-sm text-muted m-0">
-                  APPLICATION
-                </h6>
-              </li>
-              <li>
-                <Switch defaultChecked />
-                <span>New launches and projects</span>
-              </li>
-              <li>
-                <Switch defaultChecked />
-                <span>Monthly product updates</span>
-              </li>
-              <li>
-                <Switch defaultChecked />
-                <span>Subscribe to newsletter</span>
-              </li>
-            </ul>
-          </Card>
-        </Col>
-        <Col span={24} md={8} className="mb-24">
-          <Card
-            bordered={false}
-            title={<h6 className="font-semibold m-0">Profile Information</h6>}
-            className="header-solid h-full card-profile-information"
-            extra={<Button type="link">{pencil}</Button>}
-            bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
-          >
-            <p className="text-dark">
-              {" "}
-              Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer
-              is no. If two equally difficult paths, choose the one more painful
-              in the short term (pain avoidance is creating an illusion of
-              equality).{" "}
-            </p>
-            <hr className="my-25" />
-            <Descriptions title="Oliver Liam">
-              <Descriptions.Item label="Full Name" span={3}>
-                Sarah Emily Jacob
-              </Descriptions.Item>
-              <Descriptions.Item label="Mobile" span={3}>
-                (44) 123 1234 123
-              </Descriptions.Item>
-              <Descriptions.Item label="Email" span={3}>
-                sarahjacob@mail.com
-              </Descriptions.Item>
-              <Descriptions.Item label="Location" span={3}>
-                USA
-              </Descriptions.Item>
-              <Descriptions.Item label="Social" span={3}>
-                <a href="#pablo" className="mx-5 px-5">
-                  {<TwitterOutlined />}
-                </a>
-                <a href="#pablo" className="mx-5 px-5">
-                  {<FacebookOutlined style={{ color: "#344e86" }} />}
-                </a>
-                <a href="#pablo" className="mx-5 px-5">
-                  {<InstagramOutlined style={{ color: "#e1306c" }} />}
-                </a>
-              </Descriptions.Item>
-            </Descriptions>
-          </Card>
-        </Col>
-        <Col span={24} md={8} className="mb-24">
-          <Card
-            bordered={false}
-            title={<h6 className="font-semibold m-0">Conversations</h6>}
-            className="header-solid h-full"
-            bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
-          >
-            <List
-              itemLayout="horizontal"
-              dataSource={data}
-              split={false}
-              className="conversations-list"
-              renderItem={(item) => (
-                <List.Item actions={[<Button type="link">REPLY</Button>]}>
-                  <List.Item.Meta
-                    avatar={
-                      <Avatar shape="square" size={48} src={item.avatar} />
-                    }
-                    title={item.title}
-                    description={item.description}
-                  />
-                </List.Item>
-              )}
-            />
-          </Card>
-        </Col>
-      </Row>
       <Card
         bordered={false}
         className="header-solid mb-24"
         title={
           <>
             <h6 className="font-semibold">Projects</h6>
-            <p>Architects design houses</p>
+            <p>Active Centers</p>
           </>
         }
       >
         <Row gutter={[24, 24]}>
           {project.map((p, index) => (
-            <Col span={24} md={12} xl={6} key={index}>
+            <Col span={16} md={12} xl={8} key={index}>
               <Card
                 bordered={false}
                 className="card-project"
                 cover={<img alt="example" src={p.img} />}
               >
-                <div className="card-tag">{p.titlesub}</div>
-                <h5>{p.titile}</h5>
-                <p>{p.disciption}</p>
+                <div className="card-tag">{p.titlesub} </div>
+                <div className="card-time">
+                  <div>{p.lead} </div>
+                  <div>{p.time}</div>
+                </div>
+                {/* <h5>{p.titile}</h5> */}
+                {/* <p>{p.disciption}</p> */}
                 <Row gutter={[6, 0]} className="card-footer">
                   <Col span={12}>
-                    <Button type="button">VIEW PROJECT</Button>
+                    <Button type="button">VIEW CENTER</Button>
                   </Col>
-                  <Col span={12} className="text-right">
-                    <Avatar.Group className="avatar-chips">
-                      <Avatar size="small" src={profilavatar} />
-                      <Avatar size="small" src={convesionImg} />
-                      <Avatar size="small" src={convesionImg2} />
-                      <Avatar size="small" src={convesionImg3} />
-                    </Avatar.Group>
+                  <Col span={12}>
+                    <Button type="button">UPDATE AMOUNT</Button>
                   </Col>
                 </Row>
               </Card>
             </Col>
           ))}
-          <Col span={24} md={12} xl={6}>
+
+          {/* <Col span={24} md={12} xl={6}>
             <Upload
               name="avatar"
               listType="picture-card"
@@ -365,7 +230,7 @@ function Profile() {
                 uploadButton
               )}
             </Upload>
-          </Col>
+          </Col> */}
         </Row>
       </Card>
     </>

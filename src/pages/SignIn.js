@@ -21,8 +21,15 @@ import {
   Form,
   Input,
   Switch,
+  Carousel,
 } from "antd";
 import signinbg from "../assets/images/green-timing.jpeg";
+import mission from "../assets/images/misson.jpeg";
+import home from "../assets/images/home.jpeg";
+import corrasal1 from "../assets/images/corrasal-1.jpeg";
+import corrasal2 from "../assets/images/corrasal-2.jpeg";
+import corrasal3 from "../assets/images/corrasal-3.jpeg";
+
 import {
   DribbbleOutlined,
   TwitterOutlined,
@@ -82,25 +89,7 @@ const profile = [
     ></path>
   </svg>,
 ];
-const signup = [
-  <svg
-    data-v-4ebdc598=""
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      data-v-4ebdc598=""
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M6 2C5.44772 2 5 2.44772 5 3V4H4C2.89543 4 2 4.89543 2 6V16C2 17.1046 2.89543 18 4 18H16C17.1046 18 18 17.1046 18 16V6C18 4.89543 17.1046 4 16 4H15V3C15 2.44772 14.5523 2 14 2C13.4477 2 13 2.44772 13 3V4H7V3C7 2.44772 6.55228 2 6 2ZM6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H14C14.5523 9 15 8.55228 15 8C15 7.44772 14.5523 7 14 7H6Z"
-      fill="#111827"
-      className="fill-muted"
-    ></path>
-  </svg>,
-];
+
 const signin = [
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -133,36 +122,82 @@ export default class SignIn extends Component {
             <div className="header-col header-nav">
               <Menu mode="horizontal" defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1">
-                  <Link to="/dashboard">
+                  <a href="#home">
                     {template}
-                    <span> Dashboard</span>
-                  </Link>
+                    <span> HOME</span>
+                  </a>
                 </Menu.Item>
-                <Menu.Item key="2">
-                  <Link to="/profile">
-                    {profile}
-                    <span>Profile</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="3">
-                  <Link to="/sign-up">
-                    {signup}
-                    <span> Sign Up</span>
-                  </Link>
-                </Menu.Item>
+                {/* <Menu.Item key="2">
+                  <a href="#vission">
+                    {template}
+                    <span> About Us</span>
+                  </a>
+                </Menu.Item> */}
                 <Menu.Item key="4">
-                  <Link to="/sign-in">
+                  <a href="#signin">
                     {signin}
                     <span> Sign In</span>
-                  </Link>
+                  </a>
                 </Menu.Item>
               </Menu>
             </div>
             <div className="header-col header-btn">
-              <Button type="primary">FREE DOWNLOAD</Button>
+              <Button type="primary">CONTACT</Button>
             </div>
           </Header>
-          <Content className="signin">
+
+          <div id="home" style={{ padding: "40px 0" }}>
+            <Row gutter={[12, 0]} justify="space-around">
+              <Col
+                xs={{ span: 24, offset: 0 }}
+                lg={{ span: 6, offset: 2 }}
+                md={{ span: 12 }}
+              >
+                Company Consulting Group (ACG) was founded as a professional
+                services firm in yyyy with a view Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.
+                Company Consulting Group (ACG) was founded as a professional
+                services firm in yyyy with a view Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.
+                Company Consulting Group (ACG) was founded as a professional
+                services firm in yyyy with a view Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.
+                Company Consulting Group (ACG) was founded as a professional
+                services firm in yyyy with a view Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s.
+              </Col>
+              <Col
+                className="sign-img"
+                xs={{ span: 24 }}
+                lg={{ span: 12 }}
+                md={{ span: 12 }}
+                style={{ padding: 12 }}
+              >
+                <img src={home} alt="" />
+              </Col>
+            </Row>
+          </div>
+          <div id="vission">
+            <Carousel autoplay>
+              <div className="layer">
+                <img src={home} alt="" />
+              </div>
+              <div className="layer">
+                <img src={corrasal1} alt="" />
+              </div>
+              <div className="layer">
+                <img src={corrasal2} alt="" />
+              </div>
+              <div className="layer">
+                <img src={corrasal3} alt="" />
+              </div>
+            </Carousel>
+          </div>
+          <Content className="signin" id="signin">
             <Row gutter={[24, 0]} justify="space-around">
               <Col
                 xs={{ span: 24, offset: 0 }}
@@ -225,12 +260,12 @@ export default class SignIn extends Component {
                       SIGN IN
                     </Button>
                   </Form.Item>
-                  <p className="font-semibold text-muted">
+                  {/* <p className="font-semibold text-muted">
                     Don't have an account?{" "}
                     <Link to="/sign-up" className="text-dark font-bold">
                       Sign Up
                     </Link>
-                  </p>
+                  </p> */}
                 </Form>
               </Col>
               <Col
@@ -244,6 +279,7 @@ export default class SignIn extends Component {
               </Col>
             </Row>
           </Content>
+
           {/* <Footer>
             <Menu mode="horizontal">
               <Menu.Item>Company</Menu.Item>

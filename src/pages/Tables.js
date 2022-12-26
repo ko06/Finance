@@ -32,12 +32,7 @@ import ava2 from "../assets/images/logo-atlassian.svg";
 import ava3 from "../assets/images/logo-slack.svg";
 import ava5 from "../assets/images/logo-jira.svg";
 import ava6 from "../assets/images/logo-invision.svg";
-import face from "../assets/images/face-1.jpg";
-import face2 from "../assets/images/face-2.jpg";
-import face3 from "../assets/images/face-3.jpg";
-import face4 from "../assets/images/face-4.jpg";
-import face5 from "../assets/images/face-5.jpeg";
-import face6 from "../assets/images/face-6.jpeg";
+import face from "../assets/images/face-1.png";
 import pencil from "../assets/images/pencil.svg";
 
 const { Title } = Typography;
@@ -95,7 +90,7 @@ const data = [
             className="shape-avatar"
             shape="square"
             size={40}
-            src={face2}
+            src={face}
           ></Avatar>
           <div className="avatar-info">
             <Title level={5}>Michael John</Title>
@@ -139,7 +134,7 @@ const data = [
             className="shape-avatar"
             shape="square"
             size={40}
-            src={face3}
+            src={face}
           ></Avatar>
           <div className="avatar-info">
             <Title level={5}>Alexa Liras</Title>
@@ -224,7 +219,7 @@ const data = [
             className="shape-avatar"
             shape="square"
             size={40}
-            src={face4}
+            src={face}
           ></Avatar>
           <div className="avatar-info">
             <Title level={5}>Miriam Eric</Title>
@@ -267,7 +262,7 @@ const data = [
             className="shape-avatar"
             shape="square"
             size={40}
-            src={face5}
+            src={face}
           ></Avatar>
           <div className="avatar-info">
             <Title level={5}>Richard Gran</Title>
@@ -309,7 +304,7 @@ const data = [
             className="shape-avatar"
             shape="square"
             size={40}
-            src={face6}
+            src={face}
           ></Avatar>
           <div className="avatar-info">
             <Title level={5}>John Levi</Title>

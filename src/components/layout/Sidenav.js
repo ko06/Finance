@@ -208,22 +208,6 @@ function Sidenav({ color }) {
           </NavLink>
         </Menu.Item>
         <Menu.Item key="4">
-          <NavLink to="/rtl">
-            <span
-              className="icon"
-              style={{
-                background: page === "rtl" ? color : "",
-              }}
-            >
-              {rtl}
-            </span>
-            <span className="label">RTL</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item className="menu-item-header" key="5">
-          Account Pages
-        </Menu.Item>
-        <Menu.Item key="6">
           <NavLink to="/profile">
             <span
               className="icon"
@@ -233,19 +217,16 @@ function Sidenav({ color }) {
             >
               {profile}
             </span>
-            <span className="label">Profile</span>
+            <span className="label">Staff</span>
           </NavLink>
+        </Menu.Item>
+        <Menu.Item className="menu-item-header" key="5">
+          Account Pages
         </Menu.Item>
         <Menu.Item key="7">
           <NavLink to="/sign-in">
             <span className="icon">{signin}</span>
             <span className="label">Sign In</span>
-          </NavLink>
-        </Menu.Item>
-        <Menu.Item key="8">
-          <NavLink to="/sign-up">
-            <span className="icon">{signup}</span>
-            <span className="label">Sign Up</span>
           </NavLink>
         </Menu.Item>
       </Menu>

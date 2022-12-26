@@ -9,6 +9,10 @@
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+
+iframe {
+  display: none !important;
+}
 body {
   padding: 0 0 30px 0;
   background-color: #fafafa;
@@ -2034,7 +2038,6 @@ body {
 }
 .layout-default .ant-layout-header .header-brand h5 {
   white-space: nowrap;
-
   color: #141414;
   margin: 0;
 }
@@ -2758,6 +2761,7 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
 .card-project.ant-card .ant-card-cover img {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgb(0 0 0 / 12%);
+  height: 200px;
 }
 
 .card-project.ant-card .card-tag,
@@ -2770,12 +2774,7 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   font-weight: 600;
   font-size: 20px;
 }
-.card-project.ant-card .card-tag,
-.card-project.ant-card p {
-  font-weight: 600;
-  color: #8c8c8c;
-  margin-bottom: 5px;
-}
+
 .card-project.ant-card p {
   margin-bottom: 0;
 }
@@ -3045,4 +3044,40 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   svg
   path {
   fill: #8c8c8c;
+}
+
+.card-time {
+  display: flex;
+  align-content: space-around;
+  font-weight: 600;
+}
+.card-time div:first-child {
+  margin-right: auto;
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  width: 100%;
+  max-height: 60%;
+  overflow: hidden;
+}
+.ant-carousel .slick-slide .layer::after {
+  content: "";
+  background: #a9c6f1;
+  opacity: 0.09;
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ant-carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
 }
