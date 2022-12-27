@@ -13,7 +13,7 @@ import { useState } from "react";
 
 import { Card, Col, Row, Button, Collapse, Radio, Table } from "antd";
 import AddMember from "../components/common/addMember";
-import addCenter from "../components/common/addCenter";
+import AddCenter from "../components/common/addCenter";
 const { Panel } = Collapse;
 
 const columns1 = [
@@ -203,7 +203,7 @@ function Home() {
               >
                 <Button
                   type="primary"
-                  onClick={() => setAddMemberInfo({ status: true })}
+                  onClick={() => setAddCenterInfo({ status: true })}
                 >
                   New Center
                 </Button>
@@ -295,11 +295,11 @@ function Home() {
       <AddMember
         onCancel={() => setAddMemberInfo({ status: false })}
         addMemberInfo={addMemberInfo}
-      ></AddMember>
-      <addCenter
+        ></AddMember>
+      <AddCenter
+        addCenterInfo={addCenterInfo}
         onCancel={() => setAddCenterInfo({ status: false })}
-        addMemberInfo={addMemberInfo}
-      ></addCenter>
+      ></AddCenter>
     </>
   );
 }

@@ -3081,3 +3081,7 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
+
+.ant-modal, .ant-modal-content {
+  width: 1000px !important;
+}

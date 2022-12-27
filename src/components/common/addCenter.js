@@ -53,34 +53,49 @@ const AddCenter = ({ addCenterInfo, onCancel }) => {
         onValuesChange={onFinish}
         // disabled={componentDisabled}
       >
-        <Form.Item label="Checkbox" name="disabled" valuePropName="checked">
-          <Checkbox>Checkbox</Checkbox>
-        </Form.Item>
-        <Form.Item label="Radio">
-          <Radio.Group>
-            <Radio value="apple"> Apple </Radio>
-            <Radio value="pear"> Pear </Radio>
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item label="Input">
+        <Form.Item label="Center Name">
           <Input />
         </Form.Item>
-        <Form.Item label="Select">
+        <Form.Item label="Branch">
           <Select>
-            <Select.Option value="demo">Demo</Select.Option>
+            <Select.Option value="Dindugal">Dindugal</Select.Option>
+            <Select.Option value="Chinnalampatti">Chinnalampatti</Select.Option>
           </Select>
+        </Form.Item>
+        <Form.Item label="Staff">
+          <Select>
+            <Select.Option value="Saravanan">Saravanan</Select.Option>
+            <Select.Option value="Dinesh">Dinesh</Select.Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Dayorder">
+          <Select>
+            <Select.Option value="monday">Monday</Select.Option>
+            <Select.Option value="tuesday">Tuesday</Select.Option>
+            <Select.Option value="wednesday">Wednesday</Select.Option>
+            <Select.Option value="thursday">Thursday</Select.Option>
+            <Select.Option value="friday">Friday</Select.Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label="Proof Images" valuePropName="fileList">
+          <Upload action="/upload.do" listType="picture-card">
+            <div>
+              <PlusOutlined />
+              <div
+                style={{
+                  marginTop: 8,
+                }}
+              >
+                Upload
+              </div>
+            </div>
+          </Upload>
         </Form.Item>
         <Form.Item label="DatePicker">
           <DatePicker />
         </Form.Item>
-        <Form.Item label="InputNumber">
-          <InputNumber />
-        </Form.Item>
-        <Form.Item label="TextArea">
+        <Form.Item label="Information">
           <TextArea rows={4} />
-        </Form.Item>
-        <Form.Item label="Button">
-          <Button>Button</Button>
         </Form.Item>
       </Form>
     </Modal>
