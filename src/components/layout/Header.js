@@ -329,8 +329,8 @@ function Header({
                   <Text className="subtitle">See our dashboard options.</Text>
                 </Title>
               </div>
-
-              <div className="sidebar-color">
+              work in Progress ..
+              {/* <div className="sidebar-color">
                 <Title level={5}>Sidebar Color</Title>
                 <div className="theme-color mb-2">
                   <ButtonContainer>
@@ -396,18 +396,18 @@ function Header({
                   <Title level={5}>Navbar Fixed </Title>
                   <Switch onChange={(e) => handleFixedNavbar(e)} />
                 </div>
-              </div>
+              </div> */}
             </div>
           </Drawer>
           {/* <Link to="/sign-in" className="btn-sign-in">
             {profile}
             <span>Sign in</span>
           </Link> */}
-          <Input
+          {/* <Input
             className="header-search"
             placeholder="Type here..."
             prefix={<SearchOutlined />}
-          />
+          /> */}
         </Col>
       </Row>
     </>

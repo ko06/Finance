@@ -29,8 +29,8 @@ function LineChart() {
         </div>
         <div className="sales">
           <ul>
-            <li>{<MinusOutlined />} Festivel Loan</li>
-            <li>{<MinusOutlined />} Join Loan</li>
+            <li>{<MinusOutlined />} Festival Loan</li>
+            <li>{<MinusOutlined />} Join Liability Group</li>
           </ul>
         </div>
       </div>

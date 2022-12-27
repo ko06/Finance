@@ -10,7 +10,8 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import {
   Layout,
   Menu,
@@ -29,6 +30,7 @@ import home from "../assets/images/home.jpeg";
 import corrasal1 from "../assets/images/corrasal-1.jpeg";
 import corrasal2 from "../assets/images/corrasal-2.jpeg";
 import corrasal3 from "../assets/images/corrasal-3.jpeg";
+import office from "../assets/images/office.jpeg";
 
 import {
   DribbbleOutlined,
@@ -107,6 +109,7 @@ export default class SignIn extends Component {
   render() {
     const onFinish = (values) => {
       console.log("Success:", values);
+      this.props.history.push("/profile");
     };
 
     const onFinishFailed = (errorInfo) => {
@@ -139,10 +142,16 @@ export default class SignIn extends Component {
                     <span> Sign In</span>
                   </a>
                 </Menu.Item>
+                <Menu.Item key="4">
+                  <a href="#contact">
+                    {profile}
+                    <span> Contact</span>
+                  </a>
+                </Menu.Item>
               </Menu>
             </div>
             <div className="header-col header-btn">
-              <Button type="primary">CONTACT</Button>
+              {/* <Buttons type="primary">CONTACT</Buttons> */}
             </div>
           </Header>
 
@@ -194,6 +203,9 @@ export default class SignIn extends Component {
               </div>
               <div className="layer">
                 <img src={corrasal3} alt="" />
+              </div>
+              <div className="layer">
+                <img src={office} alt="" />
               </div>
             </Carousel>
           </div>
@@ -279,6 +291,7 @@ export default class SignIn extends Component {
               </Col>
             </Row>
           </Content>
+          <Content id="contact"></Content>
 
           {/* <Footer>
             <Menu mode="horizontal">

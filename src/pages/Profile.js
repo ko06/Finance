@@ -128,6 +128,24 @@ function Profile() {
       disciption:
         "Different people have different taste, and various types of music, Zimbali Resort",
     },
+    {
+      img: project3,
+      titlesub: "கிழக்கு மரியானதா தெரு- 04",
+      title: "Minimalist",
+      time: "7.00 AM",
+      lead: "ரதி",
+      disciption:
+        "Different people have different taste, and various types of music, Zimbali Resort",
+    },
+    {
+      img: project3,
+      titlesub: "கிழக்கு மரியானதா தெரு- 05",
+      title: "Minimalist",
+      time: "7.30 AM",
+      lead: "பாரதி",
+      disciption:
+        "Different people have different taste, and various types of music, Zimbali Resort",
+    },
   ];
 
   return (
