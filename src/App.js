@@ -32,7 +32,7 @@ function App() {
           <Route exact path="/billing" component={Billing} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/settings" component={Settings} />
-          {/* <Redirect from="*" to="/" /> */}
+          <Redirect from="home" to="/" />
         </Main>
       </Switch>
     </div>
