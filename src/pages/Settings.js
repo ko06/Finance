@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Card, Col, Row, Button, Collapse, Radio, Table } from "antd";
 import AddMember from "../components/common/addMember";
 import AddCenter from "../components/common/addCenter";
+import AddLoan from "../components/common/addLoan";
 const { Panel } = Collapse;
 
 const columns1 = [
@@ -174,6 +175,7 @@ function Home() {
   };
   const [addMemberInfo, setAddMemberInfo] = useState({ status: false });
   const [addCenterInfo, setAddCenterInfo] = useState({ status: false });
+  const [addLoanInfo, setAddLoanInfo] = useState({ status: false });
 
   return (
     <>
@@ -266,7 +268,12 @@ function Home() {
                 style={{ paddingLeft: 20 }}
                 className="header-col header-btn"
               >
-                <Button type="primary">New Loan</Button>
+                <Button
+                  type="primary"
+                  onClick={() => setAddLoanInfo({ status: true })}
+                >
+                  New Loan
+                </Button>
               </div>
             </Col>
             <Col span={24} md={24} className="col-info">
@@ -295,11 +302,15 @@ function Home() {
       <AddMember
         onCancel={() => setAddMemberInfo({ status: false })}
         addMemberInfo={addMemberInfo}
-        ></AddMember>
+      ></AddMember>
       <AddCenter
         addCenterInfo={addCenterInfo}
         onCancel={() => setAddCenterInfo({ status: false })}
       ></AddCenter>
+      <AddLoan
+        addLoanInfo={addLoanInfo}
+        onCancel={() => setAddLoanInfo({ status: false })}
+      ></AddLoan>
     </>
   );
 }

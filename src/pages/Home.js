@@ -28,7 +28,7 @@ import {
   Space,
   Input,
 } from "antd";
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 import {
   ToTopOutlined,
@@ -54,24 +54,24 @@ import card from "../assets/images/info-card-1.jpg";
 const { Option } = Select;
 
 function Home() {
-  const { Title, Text } = Typography;  
+  const { Title, Text } = Typography;
   const onChange = (e) => console.log(`radio checked:${e.target.value}`);
 
   const [reverse, setReverse] = useState(false);
 
   const areas = [
     {
-      label: 'Beijing',
-      value: 'Beijing',
+      label: "Beijing",
+      value: "Beijing",
     },
     {
-      label: 'Shanghai',
-      value: 'Shanghai',
+      label: "Shanghai",
+      value: "Shanghai",
     },
   ];
   const sights = {
-    Beijing: ['Tiananmen', 'Great Wall'],
-    Shanghai: ['Oriental Pearl', 'The Bund'],
+    Beijing: ["Tiananmen", "Great Wall"],
+    Shanghai: ["Oriental Pearl", "The Bund"],
   };
 
   const dollor = [
@@ -361,12 +361,10 @@ function Home() {
     },
   };
 
-
   const [form] = Form.useForm();
 
-
   const onFinish = (values) => {
-    console.log('Received values of form:', values);
+    console.log("Received values of form:", values);
   };
   const handleChange = () => {
     form.setFieldsValue({
@@ -587,99 +585,7 @@ function Home() {
             </Card>
           </Col>
         </Row> */}
-   <Form form={form} name="dynamic_form_complex" onFinish={onFinish} autoComplete="off">
-      <Form.Item
-        name="area"
-        label="Area"
-        rules={[
-          {
-            required: true,
-            message: 'Missing area',
-          },
-        ]}
-      >
-        <Select options={areas} onChange={handleChange} />
-      </Form.Item>
-      <Form.Item
-        name="phone"
-        label="Phone Number"
-        rules={[{ required: true, message: 'Please input your phone number!' }]}
-      >
-        <Input style={{ width: '100%' }} />
-      </Form.Item>
-      <Form.List name="sights">
-        {(fields, { add, remove }) => (
-          <>
-            {fields.map((field) => (
-              <Space key={field.key} align="baseline">
-                <Form.Item
-                  noStyle
-                  shouldUpdate={(prevValues, curValues) =>
-                    prevValues.area !== curValues.area || prevValues.sights !== curValues.sights
-                  }
-                >
-                  {() => (
-                    <Form.Item
-                      {...field}
-                      label="Sight"
-                      name={[field.name, 'sight']}
-                      rules={[
-                        {
-                          required: true,
-                          message: 'Missing sight',
-                        },
-                      ]}
-                    >
-                      <Select
-                        disabled={!form.getFieldValue('area')}
-                        style={{
-                          width: 130,
-                        }}
-                      >
-                        {(sights[form.getFieldValue('area')] || []).map((item) => (
-                          <Option key={item} value={item}>
-                            {item}
-                          </Option>
-                        ))}
-                      </Select>
-                    </Form.Item>
-                  )}
-                </Form.Item>
-                <Form.Item
-                  {...field}
-                  label="Price"
-                  name={[field.name, 'price']}
-                  rules={[
-                    {
-                      required: true,
-                      message: 'Missing price',
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-
-                <MinusCircleOutlined onClick={() => remove(field.name)} />
-              </Space>
-            ))}
-
-            <Form.Item>
-              <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
-                Add sights
-              </Button>
-            </Form.Item>
-          </>
-        )}
-      </Form.List>
-      <Form.Item>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
-      </Form.Item>
-    </Form>
-
       </div>
-
     </>
   );
 }
