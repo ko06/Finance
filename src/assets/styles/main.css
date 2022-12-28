@@ -3085,3 +3085,7 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
 .ant-modal, .ant-modal-content {
   width: 1000px !important;
 }
+
+td, th {
+  padding: 2px !important;
+}

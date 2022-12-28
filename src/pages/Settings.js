@@ -11,7 +11,7 @@
 */
 import { useState } from "react";
 
-import { Card, Col, Row, Button, Collapse, Radio, Table } from "antd";
+import { Card, Col, Row, Button, Collapse, Radio, Table, Checkbox } from "antd";
 import AddMember from "../components/common/addMember";
 import AddCenter from "../components/common/addCenter";
 import AddLoan from "../components/common/addLoan";
@@ -34,6 +34,12 @@ const columns1 = [
             key: "number",
             width: 100,
             children: [
+              {
+                title: "amount",
+                dataIndex: "AmountRecieved",
+                key: "AmountRecieved",
+                width: 70,
+              },
               {
                 title: "key",
                 dataIndex: "key",
@@ -147,6 +153,7 @@ const columns1 = [
 const data = [];
 for (let i = 0; i < 100; i++) {
   data.push({
+    AmountRecieved: <Checkbox></Checkbox>,
     key: i,
     name: "John Brown",
     age: i + 1,

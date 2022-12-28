@@ -16,13 +16,16 @@ import {
   Col,
   Card,
   Button,
-  List,
-  Descriptions,
+  Table,
+  Space,
+  Collapse,
   Avatar,
   Radio,
   Switch,
   Upload,
   message,
+  Checkbox,
+  DatePicker,
 } from "antd";
 
 import {
@@ -37,10 +40,179 @@ import profilavatar from "../assets/images/face-1.png";
 import project1 from "../assets/images/center-1.jpeg";
 import project2 from "../assets/images/center-2.jpeg";
 import project3 from "../assets/images/center.jpeg";
+import AddMember from "../components/common/addMember";
+import UpdateMoney from "../components/common/updateMoney";
+const { RangePicker } = DatePicker;
+
+const { Panel } = Collapse;
+const columns1 = [
+  {
+    title: "Selva Ganapathi",
+
+    children: [
+      {
+        title: "maiyam Name",
+        dataIndex: "number",
+        key: "number",
+        width: 100,
+        children: [
+          {
+            title: "maiyam Time 6.30 AM",
+            dataIndex: "number",
+            key: "number",
+            width: 100,
+            children: [
+              {
+                title: "amount",
+                dataIndex: "AmountRecieved",
+                key: "AmountRecieved",
+                width: 70,
+              },
+              {
+                title: "key",
+                dataIndex: "key",
+                key: "key",
+                width: 100,
+              },
+              {
+                title: "kulu en",
+                dataIndex: "number",
+                key: "number",
+                width: 100,
+              },
+              {
+                title: "Uruppinar",
+                dataIndex: "name",
+                key: "name",
+                width: 200,
+                sorter: (a, b) => a.age - b.age,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "mangarai-01",
+        children: [
+          {
+            title: "Staff Name: Saravanan",
+            dataIndex: "number",
+            key: "number",
+            width: 100,
+            children: [
+              {
+                title: "Attenance",
+                dataIndex: "attence",
+                key: "key",
+                width: 100,
+              },
+              {
+                title: "NET EMI",
+                dataIndex: "emi",
+                key: "emi",
+                width: 100,
+              },
+              {
+                title: "LOAN",
+                dataIndex: "loan",
+                key: "loan",
+                width: 100,
+              },
+              {
+                title: "JLG - Date",
+                dataIndex: "date",
+                key: "date",
+                width: 100,
+              },
+              {
+                title: "JLG - Week",
+                dataIndex: "week",
+                key: "week",
+                width: 100,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "maya Date : Friday",
+        children: [
+          {
+            title: "PRI",
+            dataIndex: "PRI",
+            key: "PRI",
+            width: 100,
+          },
+          {
+            title: "INT",
+            dataIndex: "INT",
+            key: "INT",
+            width: 100,
+          },
+          {
+            title: "SLG-Date",
+            dataIndex: "SLGDate",
+            key: "SLGDate",
+            width: 100,
+          },
+          {
+            title: "SLG-Week",
+            dataIndex: "SLGWeek",
+            key: "SLGWeek",
+            width: 100,
+          },
+          {
+            title: "RSD",
+            dataIndex: "RSD",
+            key: "RSD",
+            width: 100,
+          },
+          {
+            title: "TOTAL",
+            dataIndex: "TOTAL",
+            key: "TOTAL",
+            width: 100,
+          },
+        ],
+      },
+    ],
+  },
+];
+const data = [];
+for (let i = 0; i < 3; i++) {
+  data.push({
+    AmountRecieved: <Checkbox></Checkbox>,
+    key: i,
+    name: "John Brown",
+    age: i + 1,
+    street: "Lake Park",
+    building: "C",
+    number: `${parseInt((i % 5) + 1)}:${(i % 5) + 1}`,
+    companyAddress: "Lake Street 42",
+    companyName: "SoftLake Co",
+    gender: "M",
+    week: "1",
+    date: "15.12.2022",
+    emi: "14",
+    loan: "34",
+    SLGWeek: 1,
+    SLGDate: "15.12.2022",
+    PRI: 310,
+    INT: 200,
+    TOTAL: 510,
+  });
+}
 
 function Profile() {
   const [imageURL, setImageURL] = useState(false);
   const [, setLoading] = useState(false);
+  const [addMemberInfo, setAddMemberInfo] = useState({ status: false });
+  const [updateMoneyInfo, setUpdateMoneyInfo] = useState({ status: false });
+
+  let text = "asdfdsfg";
+  const onChange = (key) => {
+    console.log(key);
+  };
 
   const getBase64 = (img, callback) => {
     const reader = new FileReader();
@@ -128,24 +300,6 @@ function Profile() {
       disciption:
         "Different people have different taste, and various types of music, Zimbali Resort",
     },
-    {
-      img: project3,
-      titlesub: "கிழக்கு மரியானதா தெரு- 04",
-      title: "Minimalist",
-      time: "7.00 AM",
-      lead: "ரதி",
-      disciption:
-        "Different people have different taste, and various types of music, Zimbali Resort",
-    },
-    {
-      img: project3,
-      titlesub: "கிழக்கு மரியானதா தெரு- 05",
-      title: "Minimalist",
-      time: "7.30 AM",
-      lead: "பாரதி",
-      disciption:
-        "Different people have different taste, and various types of music, Zimbali Resort",
-    },
   ];
 
   return (
@@ -222,10 +376,20 @@ function Profile() {
                 {/* <p>{p.disciption}</p> */}
                 <Row gutter={[6, 0]} className="card-footer">
                   <Col span={12}>
-                    <Button type="button">VIEW CENTER</Button>
+                    <Button
+                      type="button ant-btn-primary"
+                      onClick={() => setAddMemberInfo({ status: true })}
+                    >
+                      Add Member
+                    </Button>
                   </Col>
                   <Col span={12}>
-                    <Button type="button">UPDATE AMOUNT</Button>
+                    <Button
+                      type="button"
+                      onClick={() => setUpdateMoneyInfo({ status: true })}
+                    >
+                      UPDATE AMOUNT
+                    </Button>
                   </Col>
                 </Row>
               </Card>
@@ -251,6 +415,76 @@ function Profile() {
           </Col> */}
         </Row>
       </Card>
+
+      <Card
+        bodyStyle={{ display: "none" }}
+        style={{ marginBottom: "20px" }}
+        title={
+          <>
+            {" "}
+            <p style={{ marginBottom: "20px" }}>Pending List</p>
+            <Row justify="space-between" align="middle" gutter={[24, 0]}>
+              <Col
+                span={24}
+                md={24}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                  paddingBottom: "20px",
+                }}
+              >
+                <Radio.Group defaultValue="a" style={{ marginRight: "20px" }}>
+                  <Radio.Button value="c">YESTERDAY</Radio.Button>
+                  <Radio.Button value="b">TODAY</Radio.Button>
+                  <Radio.Button value="a">THIS WEEK</Radio.Button>
+                </Radio.Group>
+                <Space direction="vertical" size={12}>
+                  <RangePicker />
+                </Space>
+                <div
+                  style={{ paddingLeft: 20 }}
+                  className="header-col header-btn"
+                ></div>
+              </Col>
+              <Col span={24} md={24} className="col-info">
+                <Collapse defaultActiveKey={["1"]} onChange={onChange}>
+                  <Panel header="கிழக்கு மரியானதா தெரு- 01" key="1">
+                    <Button
+                      style={{ marginBottom: "20px" }}
+                      type="primary"
+                      // onClick={() => setAddMemberInfo({ status: true })}
+                    >
+                      Update Money
+                    </Button>
+                    <Table
+                      columns={columns1}
+                      dataSource={data}
+                      bordered
+                      size="middle"
+                      scroll={{
+                        x: "calc(700px + 50%)",
+                        y: 700,
+                      }}
+                    />
+                  </Panel>
+                  <Panel header="கிழக்கு மரியானதா தெரு- 02" key="2">
+                    <p>{text}</p>
+                  </Panel>
+                </Collapse>
+              </Col>
+            </Row>
+          </>
+        }
+      ></Card>
+      <AddMember
+        onCancel={() => setAddMemberInfo({ status: false })}
+        addMemberInfo={addMemberInfo}
+      ></AddMember>
+      <UpdateMoney
+        onCancel={() => setUpdateMoneyInfo({ status: false })}
+        updateMoneyInfo={updateMoneyInfo}
+      ></UpdateMoney>
     </>
   );
 }

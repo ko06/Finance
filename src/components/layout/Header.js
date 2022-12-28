@@ -17,7 +17,7 @@ import {
   Col,
   Breadcrumb,
   Badge,
-  Dropdown,
+  Select,
   Button,
   List,
   Avatar,
@@ -288,7 +288,8 @@ function Header({
               className="ant-page-header-heading-title"
               style={{ textTransform: "capitalize" }}
             >
-              {subName.replace("/", "")}
+              {/* {subName.replace("/", "")}  */}
+              Branch - Dindugal
             </span>
           </div>
         </Col>
@@ -325,11 +326,23 @@ function Header({
             <div layout="vertical">
               <div className="header-top">
                 <Title level={4}>
-                  Configurator
-                  <Text className="subtitle">See our dashboard options.</Text>
+                  Current Branch
+                  <Text className="subtitle">See our Branch Progress.</Text>
                 </Title>
               </div>
-              work in Progress ..
+              <Select
+                style={{
+                  width: 200,
+                }}
+                defaultValue="Dindugal"
+              >
+                <Select.Option value="All">All</Select.Option>
+                <Select.Option value="Dindugal">Dindugal</Select.Option>
+                <Select.Option value="karur">Karur</Select.Option>
+                <Select.Option value="Chinnalampatti">
+                  Chinnalampatti
+                </Select.Option>
+              </Select>
               {/* <div className="sidebar-color">
                 <Title level={5}>Sidebar Color</Title>
                 <div className="theme-color mb-2">
