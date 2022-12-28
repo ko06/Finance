@@ -109,7 +109,7 @@ export default class SignIn extends Component {
   render() {
     const onFinish = (values) => {
       console.log("Success:", values);
-      this.props.history.push("/profile");
+      this.props.history.push("/dashboard");
     };
 
     const onFinishFailed = (errorInfo) => {

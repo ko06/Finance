@@ -28,11 +28,10 @@ function App() {
         <Route path="/" exact component={SignIn} />
         <Main>
           <Route exact path="/dashboard" component={Home} />
-          {/* <Route exact path="/tables" component={Tables} /> */}
           <Route exact path="/billing" component={Billing} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/settings" component={Settings} />
-          <Redirect from="home" to="/" />
+          {/* <Redirect from="*" to="/" /> */}
         </Main>
       </Switch>
     </div>
