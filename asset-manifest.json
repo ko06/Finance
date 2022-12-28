@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Finance/static/css/main.19e3a7e0.chunk.css",
-    "main.js": "/Finance/static/js/main.45f9a22c.chunk.js",
-    "main.js.map": "/Finance/static/js/main.45f9a22c.chunk.js.map",
+    "main.css": "/Finance/static/css/main.c5753747.chunk.css",
+    "main.js": "/Finance/static/js/main.c3b6b06f.chunk.js",
+    "main.js.map": "/Finance/static/js/main.c3b6b06f.chunk.js.map",
     "runtime-main.js": "/Finance/static/js/runtime-main.20b72d0d.js",
     "runtime-main.js.map": "/Finance/static/js/runtime-main.20b72d0d.js.map",
     "static/css/2.67608a4d.chunk.css": "/Finance/static/css/2.67608a4d.chunk.css",
-    "static/js/2.cf693738.chunk.js": "/Finance/static/js/2.cf693738.chunk.js",
-    "static/js/2.cf693738.chunk.js.map": "/Finance/static/js/2.cf693738.chunk.js.map",
+    "static/js/2.a0a1c2ee.chunk.js": "/Finance/static/js/2.a0a1c2ee.chunk.js",
+    "static/js/2.a0a1c2ee.chunk.js.map": "/Finance/static/js/2.a0a1c2ee.chunk.js.map",
     "index.html": "/Finance/index.html",
     "static/css/2.67608a4d.chunk.css.map": "/Finance/static/css/2.67608a4d.chunk.css.map",
-    "static/css/main.19e3a7e0.chunk.css.map": "/Finance/static/css/main.19e3a7e0.chunk.css.map",
-    "static/js/2.cf693738.chunk.js.LICENSE.txt": "/Finance/static/js/2.cf693738.chunk.js.LICENSE.txt",
-    "static/js/main.45f9a22c.chunk.js.LICENSE.txt": "/Finance/static/js/main.45f9a22c.chunk.js.LICENSE.txt",
+    "static/css/main.c5753747.chunk.css.map": "/Finance/static/css/main.c5753747.chunk.css.map",
+    "static/js/2.a0a1c2ee.chunk.js.LICENSE.txt": "/Finance/static/js/2.a0a1c2ee.chunk.js.LICENSE.txt",
+    "static/js/main.c3b6b06f.chunk.js.LICENSE.txt": "/Finance/static/js/main.c3b6b06f.chunk.js.LICENSE.txt",
     "static/media/bg-profile.9c36abe7.jpg": "/Finance/static/media/bg-profile.9c36abe7.jpg",
     "static/media/main.css": "/Finance/static/media/info-card-3.e73b3934.jpg",
     "static/media/center-1.b66ca1c0.jpeg": "/Finance/static/media/center-1.b66ca1c0.jpeg",
@@ -44,8 +44,8 @@
   "entrypoints": [
     "static/js/runtime-main.20b72d0d.js",
     "static/css/2.67608a4d.chunk.css",
-    "static/js/2.cf693738.chunk.js",
-    "static/css/main.19e3a7e0.chunk.css",
-    "static/js/main.45f9a22c.chunk.js"
+    "static/js/2.a0a1c2ee.chunk.js",
+    "static/css/main.c5753747.chunk.css",
+    "static/js/main.c3b6b06f.chunk.js"
   ]
 }
