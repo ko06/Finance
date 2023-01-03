@@ -3082,10 +3082,22 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   color: #fff;
 }
 
-.ant-modal, .ant-modal-content {
+.ant-modal,
+.ant-modal-content {
   width: 1000px !important;
 }
 
-td, th {
+td,
+th {
   padding: 2px !important;
 }
+
+/* // customise */
+
+.finserve-form .ant-form-item-control{
+  margin-right: 10px;
+}
+.ant-form-item {
+ min-width: 300px;
+}
+
