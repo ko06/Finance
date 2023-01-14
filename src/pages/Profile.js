@@ -9,8 +9,8 @@
   =========================================================
   * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import { useState } from "react";
-
+import { useState,useEffect } from "react";
+import PDService from "../service/service";
 import {
   Row,
   Col,
@@ -214,6 +214,20 @@ function Profile() {
     console.log(key);
   };
 
+  let selva = () => {
+  
+    let data ;
+
+    PDService.getCaste('http://localhost:8000/wel/')
+    .then(res => {
+        data = res.data;
+        this.setState({
+            details : data    
+        });
+    })
+    .catch(err => {})
+}
+
   const getBase64 = (img, callback) => {
     const reader = new FileReader();
     reader.addEventListener("load", () => callback(reader.result));
@@ -301,6 +315,11 @@ function Profile() {
         "Different people have different taste, and various types of music, Zimbali Resort",
     },
   ];
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    selva()
+  });
 
   return (
     <>
